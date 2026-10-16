@@ -1,0 +1,1001 @@
+/* =========================================================
+   AquaBrush Kenya — plumbing & painting supply + service co.
+   Palette: teal (water) + copper (pigment) + dark ink on cool paper
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root {
+    --ink: #16241F;
+    --paper: #EEF2F1;
+    --teal: #0E5C63;
+    --teal-deep: #0A3D42;
+    --copper: #C1592B;
+    --copper-light: #E8A15C;
+    --putty: #E4DCC8;
+    --grey: #5B6D69;
+    --white: #FCFDFC;
+
+    --font-display: 'Archivo Expanded', 'Arial Narrow', sans-serif;
+    --font-body: 'Work Sans', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+}
+
+::selection {
+    background-color: var(--copper);
+    color: var(--white);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--copper);
+    outline-offset: 2px;
+}
+
+/* ---------- Nav ---------- */
+
+nav {
+    text-align: center;
+    color: var(--white);
+    background-color: var(--teal-deep);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    height: 78px;
+    z-index: 1000;
+    margin-left: 0px;
+    padding: 0 40px;
+    border-bottom: 3px solid var(--copper);
+}
+
+nav b {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: 0.02em;
+}
+
+nav b p {
+    margin: 0;
+    padding: 0;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 0;
+}
+
+.nav__link {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.nav__link:hover,
+.nav__link.active {
+    color: var(--copper-light);
+    border-bottom-color: var(--copper-light);
+}
+
+/* ---------- Type ---------- */
+
+p {
+    text-align: left;
+    color: var(--ink);
+    font-size: 1.05em;
+    line-height: 1.65;
+    margin: 20px 30px;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--ink);
+    font-size: 3.2em;
+    line-height: 1.05;
+    margin: 0px;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--ink);
+    font-size: 2.4em;
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 22px;
+}
+
+/* brush-stroke swipe under section headings — signature element */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-1.5deg);
+    width: 120px;
+    height: 10px;
+    background: linear-gradient(90deg, var(--copper), var(--copper-light));
+    border-radius: 40% 60% 60% 40% / 60% 50% 50% 40%;
+}
+
+h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-align: center;
+    color: var(--ink);
+    font-size: 1.1em;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.Radial-text-gradient {
+    background: radial-gradient(circle, var(--copper-light), var(--teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ---------- Hero ---------- */
+
+header {
+    margin-top: 100px;
+}
+
+.hero {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 190px 60px 90px;
+    text-align: left;
+    position: relative;
+    background-color: var(--teal-deep);
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* repeating pipe-thread stripe pattern — signature element */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        135deg,
+        rgba(232, 161, 92, 0.08) 0px,
+        rgba(232, 161, 92, 0.08) 2px,
+        transparent 2px,
+        transparent 18px
+    );
+    pointer-events: none;
+}
+
+.hero h1,
+.hero > div > h1 {
+    color: var(--white);
+}
+
+.hero p {
+    color: #C9D8D5;
+    margin-left: 0;
+    max-width: 640px;
+    position: relative;
+}
+
+.hero > div {
+    position: relative;
+    z-index: 1;
+}
+
+.intro {
+    background-color: var(--putty);
+}
+
+.top-contact-btn {
+    border: none;
+    border-radius: 4px;
+    justify-content: left;
+    margin: 5px 10px 5px 0;
+    padding: 14px 26px;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--copper);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.top-contact-btn:hover {
+    background-color: var(--copper-light);
+    transform: translateY(-2px);
+}
+
+.top-contact-btn:nth-of-type(2) {
+    background-color: transparent;
+    border: 2px solid var(--copper-light);
+    color: var(--copper-light);
+}
+
+.top-contact-btn:nth-of-type(2):hover {
+    background-color: var(--copper-light);
+    color: var(--teal-deep);
+}
+
+.top-contact-btn:nth-of-type(3) {
+    background-color: transparent;
+    border: 2px solid #ffffff55;
+    color: var(--white);
+}
+
+.top-contact-btn:nth-of-type(3):hover {
+    border-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Services ---------- */
+
+#services {
+    padding: 70px 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#services > p {
+    text-align: center;
+    color: var(--grey);
+    max-width: 620px;
+    margin: 0 auto 40px;
+}
+
+#services article {
+    background-color: var(--white);
+    border: 1px solid #DDE4E2;
+    border-left: 4px solid var(--teal);
+    border-radius: 6px;
+    margin: 18px 0;
+    box-shadow: 0 2px 10px rgba(10, 61, 66, 0.05);
+}
+
+#services article:nth-of-type(even) {
+    border-left-color: var(--copper);
+}
+
+#services article > div {
+    padding: 26px 30px;
+    white-space: pre-line;
+    font-family: var(--font-body);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 1em;
+}
+
+/* ---------- Tools section ---------- */
+
+.body {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 80px 20px 40px;
+    background-color: var(--paper);
+}
+
+.filter_btns,
+.filter-btns {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    position: relative;
+    display: inline-block;
+    background-color: var(--white);
+    border: 2px solid var(--teal);
+    border-radius: 999px;
+    color: var(--teal-deep);
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 10px 22px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+.area {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: transparent;
+    padding: 20px;
+    font-size: 1em;
+    color: var(--grey);
+    line-height: 1.6;
+}
+
+.container {
+    position: relative;
+    width: 280px;
+    margin: 0;
+    padding: 12px;
+    background-color: var(--white);
+    border: 1px solid #DDE4E2;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(10, 61, 66, 0.06);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(10, 61, 66, 0.14);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(14, 92, 99, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.container:hover::before {
+    opacity: 1;
+}
+
+.contact-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+
+    padding: 10px 22px;
+    background-color: var(--copper);
+    color: var(--white);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.container:hover .contact-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+img {
+    width: 100%;
+    height: 220px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.content {
+    margin-top: 0px;
+    margin: 20px;
+    background-color: var(--white);
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    font-size: 1em;
+    color: var(--ink);
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* article data-category price-tag style label, driven purely by CSS */
+.container[data-category="rent"]::after,
+.container[data-category="buy"]::after {
+    content: attr(data-category);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    font-family: var(--font-mono);
+    font-size: 0.65em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    background-color: var(--teal);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.container[data-category="buy"]::after {
+    background-color: var(--copper);
+}
+
+/* ---------- Contact & footer ---------- */
+
+.contact_section {
+    margin-top: 20px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.contact_us {
+    background-color: var(--putty);
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.15em;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact_us a {
+    color: var(--teal-deep);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--copper);
+    text-decoration-thickness: 2px;
+}
+
+#footer {
+    margin-top: 40px;
+    position: relative;
+}
+
+#footer::before {
+    content: '';
+    display: block;
+    height: 6px;
+    background-image: repeating-linear-gradient(
+        135deg,
+        var(--copper) 0px,
+        var(--copper) 10px,
+        var(--copper-light) 10px,
+        var(--copper-light) 20px
+    );
+}
+
+footer {
+    background-color: var(--teal-deep);
+    color: #C9D8D5;
+    text-align: center;
+    padding: 34px 20px;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    letter-spacing: 0.02em;
+}
+
+footer p {
+    color: #C9D8D5;
+    margin: 6px auto;
+}
+
+/* ---------- Scroll reveal ---------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   Rental page components (page.html)
+   ========================================================= */
+
+/* ---------- Rental hero ---------- */
+
+.rental-hero {
+    padding: 190px 60px 70px;
+    background-color: var(--teal-deep);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.rental-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        135deg,
+        rgba(232, 161, 92, 0.08) 0px,
+        rgba(232, 161, 92, 0.08) 2px,
+        transparent 2px,
+        transparent 18px
+    );
+    pointer-events: none;
+}
+
+.rental-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.rental-hero .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8em;
+    color: var(--copper-light);
+    margin: 0 0 14px;
+    padding: 0;
+}
+
+.rental-hero h1 {
+    color: var(--white);
+    font-size: 2.6em;
+    margin-bottom: 6px;
+}
+
+.rental-hero .counties {
+    font-family: var(--font-mono);
+    color: #C9D8D5;
+    font-size: 0.95em;
+    letter-spacing: 0.04em;
+    margin: 0 0 20px;
+}
+
+.rental-hero p.lede {
+    color: #E4ECEA;
+    font-size: 1.15em;
+    max-width: 620px;
+    margin: 0 0 10px;
+}
+
+/* ---------- Why rent from us ---------- */
+
+.why-rent {
+    padding: 70px 40px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.why-rent__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.why-rent__card {
+    flex: 1 1 220px;
+    max-width: 260px;
+    background-color: var(--white);
+    border: 1px solid #DDE4E2;
+    border-top: 4px solid var(--teal);
+    border-radius: 6px;
+    padding: 24px 20px;
+    box-shadow: 0 2px 10px rgba(10, 61, 66, 0.05);
+}
+
+.why-rent__card:nth-child(even) {
+    border-top-color: var(--copper);
+}
+
+.why-rent__card .tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    background-color: var(--teal);
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+}
+
+.why-rent__card:nth-child(even) .tag {
+    background-color: var(--copper);
+}
+
+.why-rent__card h3 {
+    text-align: left;
+    font-size: 1.05em;
+    margin: 0 0 8px;
+}
+
+.why-rent__card p {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--grey);
+    line-height: 1.55;
+}
+
+/* ---------- Pricing table ---------- */
+
+.pricing {
+    padding: 30px 40px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing p.pricing-note {
+    text-align: center;
+    color: var(--grey);
+    max-width: 560px;
+    margin: 0 auto 30px;
+}
+
+.pricing-table-wrap {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(10, 61, 66, 0.06);
+    margin: 0 20px;
+}
+
+table.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    font-size: 0.95em;
+    min-width: 640px;
+}
+
+table.pricing-table thead th {
+    background-color: var(--teal-deep);
+    color: var(--white);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.75em;
+    text-align: left;
+    padding: 14px 18px;
+}
+
+table.pricing-table tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #E4E9E7;
+    color: var(--ink);
+}
+
+table.pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+table.pricing-table tbody tr:nth-child(even) {
+    background-color: var(--paper);
+}
+
+table.pricing-table td.equipment-name {
+    font-weight: 600;
+    color: var(--teal-deep);
+}
+
+table.pricing-table td.rate {
+    font-family: var(--font-mono);
+    white-space: nowrap;
+}
+
+.delivery-note {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    color: var(--grey);
+    margin: 20px 20px 0;
+}
+
+/* ---------- WhatsApp / contractor banners ---------- */
+
+.whatsapp-banner {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: var(--putty);
+    border-radius: 8px;
+    padding: 30px 34px;
+    text-align: center;
+}
+
+.whatsapp-banner h3 {
+    margin: 0 0 10px;
+    font-size: 1.15em;
+}
+
+.whatsapp-banner .whatsapp-example {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background-color: var(--white);
+    border: 1px dashed var(--teal);
+    border-radius: 6px;
+    padding: 10px 18px;
+    color: var(--teal-deep);
+    margin-top: 6px;
+}
+
+.contractor-banner {
+    max-width: 900px;
+    margin: 0 auto 70px;
+    background-color: var(--teal-deep);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 30px 34px;
+    text-align: center;
+}
+
+.contractor-banner h3 {
+    color: var(--copper-light);
+    margin: 0 0 8px;
+    font-size: 1.1em;
+}
+
+.contractor-banner p {
+    color: #E4ECEA;
+    margin: 0;
+}
+
+.contractor-banner strong {
+    color: var(--white);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+    nav {
+        padding: 0 16px;
+        height: 64px;
+    }
+
+    .nav__links {
+        gap: 14px;
+    }
+
+    .nav__link {
+        font-size: 0.65rem;
+    }
+
+    .hero {
+        padding: 110px 24px 60px;
+    }
+
+    h1 {
+        font-size: 2.1em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .rental-hero {
+        padding: 110px 24px 50px;
+    }
+
+    .rental-hero h1 {
+        font-size: 2em;
+    }
+
+    .why-rent,
+    .pricing {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .whatsapp-banner,
+    .contractor-banner {
+        margin-left: 16px;
+        margin-right: 16px;
+        padding: 22px 20px;
+    }
+}
+
+
+/* =========================================================
+   AquaBrush — index.html updates
+   Load AFTER your main stylesheet so these rules override it.
+   (Safe to paste at the bottom of your existing css instead.)
+   ========================================================= */
+
+/* ---------- 3. Taller hero picture ---------- */
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: stretch;          /* image column matches text column height */
+}
+
+.hero__media {
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.hero__media img {
+    width: 100%;
+    height: 100%;                  /* overrides the global img { height: 220px } */
+    min-height: 560px;             /* raise/lower this to taste */
+    max-height: 760px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--copper);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- 2. Services cards laid out in rows ---------- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.services-grid .service_boxes {
+    margin: 0 !important;          /* grid gap handles spacing */
+    display: flex;
+}
+
+.services-grid .service_boxes > div {
+    white-space: normal !important;
+    width: 100%;
+}
+
+.services-grid .service_boxes h2 {
+    text-align: left;
+    font-size: 1.3em;
+    margin: 0 0 14px;
+    padding-bottom: 14px;
+}
+
+.services-grid .service_boxes h2::after {
+    left: 0;
+    transform: rotate(-1.5deg);
+    width: 70px;
+}
+
+.services-grid ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.services-grid li {
+    margin-bottom: 6px;
+    line-height: 1.55;
+}
+
+/* ---------- 1. Project videos ---------- */
+.projects-videos {
+    padding: 70px 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-videos > p {
+    text-align: center;
+    color: var(--grey);
+    max-width: 620px;
+    margin: 0 auto 40px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.video-card {
+    background-color: var(--white);
+    border: 1px solid #DDE4E2;
+    border-top: 4px solid var(--teal);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(10, 61, 66, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-card:nth-child(even) {
+    border-top-color: var(--copper);
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(10, 61, 66, 0.14);
+}
+
+.video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    object-fit: cover;
+}
+
+.video-card__info {
+    padding: 14px 18px 18px;
+}
+
+.video-card__info h3 {
+    text-align: left;
+    margin: 0 0 6px;
+}
+
+.video-card__info p {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--grey);
+    line-height: 1.5;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .hero__inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .hero__media img {
+        min-height: 360px;
+        max-height: 480px;
+    }
+}
+
+@media (max-width: 720px) {
+    .projects-videos {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .services-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
