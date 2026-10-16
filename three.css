@@ -522,13 +522,13 @@ footer p {
 
 /* ---------- Scroll reveal ---------- */
 
-.reveal {
+.js .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.reveal.active {
+.js .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -956,9 +956,10 @@ table.pricing-table td.rate {
 .video-card video {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: auto;              /* follow the video's own aspect ratio */
+    max-height: 70vh;          /* keeps tall/portrait clips from filling the screen */
     background: #000;
-    object-fit: cover;
+    object-fit: contain;       /* never crop - letterbox if needed */
 }
 
 .video-card__info {
