@@ -3,201 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="two.css">
+    <title>Quality Painting & Plumbing</title>
+    <link rel="stylesheet" href="two2.css">
 </head>
-
-
 
 <body>
 
-        <nav>
-
-            <b class="Radial-text-gradient"><p>AquaBrush</p></b>
-            <div class="nav__links">
+    <nav>
+        <b class="Radial-text-gradient"><p>AquaBrush</p></b>
+        <div class="nav__links">
             <a href="#hero" class="nav__link active">About Us</a>
+            <a href="#projects" class="nav__link">Projects</a>
             <a href="#body" class="nav__link">Tools</a>
             <a href="#contact_us" class="nav__link">Contact Us</a>
+        </div>
+    </nav>
 
-            </div>
-
-    
-        </nav>  
-
-<section class="hero" id="hero">
-    <div class="hero__inner">
-        <div class="hero__content">
-            <div>
-                <h1>Welcome to AquaBrush Kenya</h1>
-                <p>We are dedicated to providing quality painting and plumbing supplies in Kenya.</p>
-                <p>At AquaBrush, we deliver dependable plumbing and painting solutions for homes and businesses. Our team is skilled in repairing leaks, unclogging drains, installing systems, and transforming spaces with professional painting.
+    <section class="hero" id="hero">
+        <div class="hero__inner">
+            <div class="hero__content">
+                <div>
+                    <h1>Welcome to AquaBrush Kenya</h1>
+                    <p>We are dedicated to providing quality painting and plumbing supplies in Kenya.</p>
+                    <p>At AquaBrush, we deliver dependable plumbing and painting solutions for homes and businesses. Our team is skilled in repairing leaks, unclogging drains, installing systems, and transforming spaces with professional painting.
 
 We focus on precision, efficiency, and lasting results. Every project is handled with clear communication and respect for your time and property. Whether it's fixing essential systems or refreshing interiors, we ensure the work is done right.
 
 Your satisfaction drives us — reliable service, quality finishes, and a team you can trust</p>
-                <p>Need a tool as well? No worries, we've got you covered!</p>
+                    <p>Need a tool as well? No worries, we've got you covered!</p>
+                </div>
+
+                <button class="top-contact-btn" onclick="window.location.href='#contact_us'">Call us</button>
+                <button class="top-contact-btn" onclick="window.location.href='#body'">View our tools</button>
+                <button class="top-contact-btn" onclick="window.location.href='#footer'">Learn more</button>
             </div>
 
-            <button class="top-contact-btn" onclick="window.location.href='#contact_us'">Call us</button>
-            <button class="top-contact-btn" onclick="window.location.href='#body'">View our tools</button>
-            <button class="top-contact-btn" onclick="window.location.href='#footer'">Learn more</button>
+            <div class="hero__media">
+                <img src="isohs projects/WhatsApp Image 2026-07-28 at 20.56.13.jpeg" alt="AquaBrush technician at work">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Services (cards now flow in rows) ============ -->
+    <section id="services" class="reveal">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services to meet all your painting and plumbing needs.</p>
+
+        <div class="services-grid">
+
+            <article class="service_boxes">
+                <div>
+                    <h2>1. Painting Services</h2>
+                    <ul>
+                        <li>Interior &amp; exterior house painting</li>
+                        <li>Office, shop &amp; commercial painting</li>
+                        <li>Wall surface preparation &amp; skimming</li>
+                        <li>Ceiling, grille &amp; door painting</li>
+                        <li>Waterproofing &amp; epoxy floor coating</li>
+                        <li>Color consultation &amp; spray painting</li>
+                        <li>Pressure washing before painting</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="service_boxes">
+                <div>
+                    <h2>2. Plumbing Services</h2>
+                    <ul>
+                        <li>Leak detection &amp; pipe repairs</li>
+                        <li>Bathroom and kitchen plumbing</li>
+                        <li>Water tank, pump &amp; pressure system installation</li>
+                        <li>Drain cleaning &amp; sewer unclogging</li>
+                        <li>Geyser, shower &amp; water heater installation</li>
+                        <li>Pipe fitting: PPR, GI, PVC</li>
+                        <li>Emergency plumbing - 24/7</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="service_boxes">
+                <div>
+                    <h2>3. Tools &amp; Supplies Shop</h2>
+                    <ul>
+                        <li><strong>Plumbing Tools:</strong> Pipe wrenches, pliers, threaders, PPR welding machines, plungers</li>
+                        <li><strong>Painting Tools:</strong> Brushes, rollers, spray guns, paint mixers, scaffolding, ladders</li>
+                        <li><strong>Power Tools:</strong> Drills, grinders, pressure washers, blowers</li>
+                        <li><strong>Materials:</strong> Pipes, fittings, faucets, sinks, paint, thinners, sealants, sandpaper</li>
+                        <li><strong>Delivery:</strong> Available across Eldoret and countrywide</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="service_boxes">
+                <div>
+                    <h2>4. Extra Services</h2>
+                    <ul>
+                        <li>Free site visit &amp; quotation</li>
+                        <li>Project management for construction finishing</li>
+                        <li>Maintenance contracts for homes, schools &amp; offices</li>
+                        <li>Tool hire/rental for short-term projects</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ============ Project videos ============ -->
+    <section id="projects" class="projects-videos reveal">
+        <h2>Project Videos</h2>
+        <p>Watch a sample of the work we do on real sites.</p>
+
+        <div class="video-grid">
+
+            <article class="video-card">
+                <video controls preload="metadata">
+                    <source src="spc_installation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-card__info">
+                    <h3>SPC Installation</h3>
+                    <p>Start-to-finish SPC flooring installation.</p>
+                </div>
+            </article>
+
+            <!-- Copy this block for each new video.
+                 Add poster="your-thumbnail.jpg" to the <video> tag for a custom thumbnail.
+
+            <article class="video-card">
+                <video controls preload="metadata">
+                    <source src="your_video.mp4" type="video/mp4">
+                </video>
+                <div class="video-card__info">
+                    <h3>Project title</h3>
+                    <p>One-line description.</p>
+                </div>
+            </article>
+            -->
+
+        </div>
+    </section>
+
+    <section id="body" class="body reveal">
+
+        <h2 class="Radial-text-gradient">Tools</h2>
+
+        <div class="filter_btns">
+            <button class="filter-btn" data-filter="all">All tools</button>
+            <button class="filter-btn" data-filter="rent">Rent Tools</button>
+            <button class="filter-btn" data-filter="buy">Buy Tool</button>
         </div>
 
-        <div class="hero__media">
-            <img src="isohs projects/WhatsApp Image 2026-07-28 at 20.56.13.jpeg" alt="AquaBrush technician at work">
+        <div class="area">
+
+            <article class="container" data-category="rent">
+                <div>
+                    <img src="isohs tools/for hire 2.jpeg" alt="PPR pipe welding machine available for hire">
+                </div>
+                <div>
+                    <h3>PPR Pipe Welding Machine</h3>
+                </div>
+            </article>
+
+            <article class="container" data-category="buy">
+                <div>
+                    <img src="isohs tools/for sale.jpeg" alt="Manual pipe threading kit for sale">
+                </div>
+                <div>
+                    <h3>Manual Pipe Threading Kit</h3>
+                </div>
+            </article>
+
+            <article class="container" data-category="buy">
+                <div>
+                    <img src="isohs tools/for sale 1.jpeg" alt="PPR concealed stop valve and gate valve fitting">
+                </div>
+                <div>
+                    <h3>PPR Concealed Stop Valve / Gate Valve Fitting</h3>
+                </div>
+            </article>
+
+            <article class="container" data-category="buy">
+                <div>
+                    <img src="isohs tools/for sale 2.jpeg" alt="Complete PPR pipe fusion tool kit">
+                </div>
+                <div>
+                    <h3>Complete PPR Pipe Fusion Tool Kit</h3>
+                </div>
+            </article>
+
+            <article class="container" data-category="buy">
+                <div class="content">
+                    <img src="isohs tools/for sale 3.jpeg" alt="Digital PPR pipe welding machine">
+                </div>
+                <div>
+                    <h3>Digital PPR Pipe Welding Machine</h3>
+                </div>
+            </article>
+
         </div>
-    </div>
-</section>
 
-<section id="services" class="reveal">
-    <h2>Our Services</h2>
-    <p>We offer a wide range of services to meet all your painting and plumbing needs.</p>
-
-    <article>
-        <div>
-            <h2>1. Painting Services</h2>
-- Interior & exterior house painting
-- Office, shop & commercial painting
-- Wall surface preparation & skimming
-- Ceiling, grille & door painting
-- Waterproofing & epoxy floor coating
-- Color consultation & spray painting
-- Pressure washing before painting
+        <div class="contact_us">
+            <p>Want to view more of our tools? <a href="page.html">Click here</a></p>
         </div>
-    </article>
+    </section>
 
-    <article>
-        <div>
-            <h2>2. Plumbing Services</h2>
-- Leak detection & pipe repairs
-- Bathroom and kitchen plumbing
-- Water tank, pump & pressure system installation
-- Drain cleaning & sewer unclogging  
-- Geyser, shower & water heater installation
-- Pipe fitting: PPR, GI, PVC
-- Emergency plumbing - 24/7
+    <section class="contact_section reveal" id="contact_us">
+        <h2>Contact Us</h2>
+        <div class="contact_us">
+            <p>Email us at: <strong>oireregesaka2@gmail.com</strong></p>
+            <p>Want to talk to us? Call or Whatsapp at <b>+254 741785715</b></p>
+            <p>Want to view more of our tools? <a href="page.html">Tools page</a></p>
         </div>
-    </article>
+    </section>
 
+    <section id="footer" class="reveal">
+        <footer>
+            <p>&copy; 2026 AquaBrush Kenya. All rights reserved.</p>
+            <p>Contact: +254 741785715</p>
+        </footer>
+    </section>
 
-    <article>
-        <div>
-            <h2>3. Tools & Supplies Shop</h2>
-            <ul>
-                <li><strong>Plumbing Tools:</strong> Pipe wrenches, pliers, threaders, PPR welding machines, plungers</li>
-                <li><strong>Painting Tools:</strong> Brushes, rollers, spray guns, paint mixers, scaffolding, ladders</li>
-                <li><strong>Power Tools:</strong> Drills, grinders, pressure washers, blowers</li>
-                <li><strong>Materials:</strong> Pipes, fittings, faucets, sinks, paint, thinners, sealants, sandpaper</li>
-                <li><strong>Delivery:</strong> Available across Eldoret and countrywide</li>
-            </ul>
-        </div>
-    </article>
-
-    <article>
-        <div>
-            <h2>4. Extra Services</h2>
-            <ul>
-                <li>Free site visit & quotation</li>
-                <li>Project management for construction finishing</li>
-                <li>Maintenance contracts for homes, schools & offices</li>
-                <li>Tool hire/rental for short-term projects</li>
-            </ul>
-        </div>
-    </article>
-
-
-
-</section>
-
-
-
- 
- <section id="body" class="body reveal" >
-
-    <h2 class="Radial-text-gradient">Tools</h2>
-
-    <div class="filter_btns">
-        <button class="filter-btn" data-filter="all">All tools</button>
-        <button class="filter-btn" data-filter="rent">Rent Tools</button>
-        <button class="filter-btn" data-filter="buy">Buy Tool</button>
-    </div>
-
-    <div class="area">
-
-
-        <article class="container" data-category="rent">
-            <div>
-               <img src="isohs tools\for hire 2.jpeg" alt ="An image placeholder">
-            </div>
-            <div>
-                <h3>PPR Pipe Welding Machine</h3>
-            </div>
-        </article>
-
-        <article class="container" data-category="buy">
-            <div>
-               <img src="isohs tools\for sale.jpeg" alt ="An image placeholder">
-            </div>
-            <div>
-                <h3>Manual Pipe Threading Kit</h3>
-            </div>
-        </article>
-
-        <article class="container" data-category="buy">
-            <div>
-               <img src="isohs tools\for sale 1.jpeg" alt ="An image placeholder">
-            </div>
-            <div>
-                <h3>PPR Concealed Stop Valve / Gate Valve Fitting</h3>
-            </div>
-        </article>
-
-        <article class="container" data-category="buy">
-            <div>
-               <img src="isohs tools\for sale 2.jpeg" alt ="An image placeholder">
-            </div>
-            <div>
-                <h3>Complete PPR Pipe Fusion Tool Kit</h3>
-            </div>
-        </article>
-
-        <article class="container" data-category="buy">
-            <div class="content">
-               <img src="isohs tools\for sale 3.jpeg" alt ="An image placeholder">
-            </div>
-            <div>
-                <h3>Digital PPR Pipe Welding Machine</h3>
-            </div>
-        </article>
-        
-
-    </div>   
-
-    <div class="contact_us">
-        <p> Want to view more of our tools? <a href="page.html">Click here</a></p>
-    </div>
- </section>
-
-
-  <section class="contact_section reveal" id="contact_us" class="reveal">
-      <h2>Contact Us</h2>
-    <div class="contact_us">
-       <p>Email us at: <strong>oireregesaka2@gmail.com</strong></p>
-       <p>Want to talk to us? Call or Whatsapp at <b>+254 741785715</b></p>
-       <p> Want to view more of our tools? <a href="page.html">Tools page</a></p>
-    </div>
-    
-
-  </section>
-
-  <section id="footer" class="reveal">
-    <footer>
-        <p>&copy; 2024 AquaBrush Kenya. All rights reserved.</p>
-        <p>Contact: +254 741785715</p>
-    </footer>
-  </section>
-
-  <script src="one.js"></script>
+    <script src="one.js"></script>
 
 </body>
 </html>
